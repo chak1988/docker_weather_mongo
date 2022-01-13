@@ -2,7 +2,7 @@ version: '3.0'
 
 services:
     weather_bot:
-        build: /app
+        build: weather_bot_project/app
         ports:
             - 5000:5000
 
