@@ -7,7 +7,7 @@ RUN pip3 install mongoengine
 RUN mkdir -p /usr/src/application/
 WORKDIR /usr/src/application/
 COPY . /usr/src/application/
-COPY webhook_weather_key.pem /etc/ssl/private/webhook_weather_key.pem
-COPY webhook_weather_cert.pem /etc/ssl/certs/webhook_weather_cert.pem
+COPY /home/docker_weather_bot/webhook_weather_key.pem /etc/ssl/private/webhook_weather_key.pem
+COPY /home/docker_weather_bot/webhook_weather_cert.pem /etc/ssl/certs/webhook_weather_cert.pem
 RUN pip3 install gunicorn
 CMD ["gunicorn"  , "--bind", "0.0.0.0:5000", "my_weather_bot:app"]
