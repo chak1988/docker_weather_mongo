@@ -20,10 +20,6 @@ services:
         env_file: app/.env
 
 
-
-        ports:
-            - 27018:27017
-
     nginx:
         image: nginx
         volumes:
