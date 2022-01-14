@@ -14,9 +14,7 @@ services:
 
     mongodb:
         image: mongo
-        volumes:
-            - mongodb_volume:/data/db
-        env_file: app/.env
+
 
 
     nginx:
