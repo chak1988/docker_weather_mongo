@@ -2,7 +2,7 @@ import mongoengine as me
 import os
 
 
-c = me.DEFAULT_HOST = os.environ.get('MONGO_DB_ADDR')
+c = me.DEFAULT_HOST = 'mongo'
 me.connect('weather_db')
 
 class Gallary(me.Document):
