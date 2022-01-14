@@ -9,12 +9,11 @@ services:
         ports:
             - 5000:5000
         links:
-            - mongo
+            - mongodb
         env_file: app/.env
 
-    mongo:
+    mongodb:
         image: mongo:5.0.5-focal
-        hostname: mongo
         volumes:
             - mongodb_volume:/data/db
         env_file: app/.env
