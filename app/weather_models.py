@@ -1,5 +1,8 @@
 import mongoengine as me
+import os
 
+
+c = me.DEFAULT_HOST = os.environ.get('MONGO_DB_ADDR')
 me.connect('weather_db')
 
 class Gallary(me.Document):
@@ -10,6 +13,7 @@ class Gallary(me.Document):
         return cls.objects.get(title = title)
 
 if __name__ == "__main__":
+    print(c)
     list_of_images = ['partial_clouds.jpg', 'Sunny_weather.jpg', 'Thunder_clouds.jpeg', 'Thunder_storm.jpg']
     for img in list_of_images:
         with open(f'app/images/{img}', 'rb') as image:

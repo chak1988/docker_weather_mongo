@@ -1,10 +1,21 @@
 version: '3.0'
+volumes:
+    mongodb_volume:
+
 
 services:
     weather_bot:
         build: app/
         ports:
             - 5000:5000
+        depends_on:
+            - mongo
+        env_file: .env
+
+    mongo:
+        image: mongo:5.0.5-focal
+        volumes:
+            mongodb_volume:/data/db
 
     nginx:
         image: nginx
