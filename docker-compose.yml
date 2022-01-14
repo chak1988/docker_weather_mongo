@@ -15,7 +15,7 @@ services:
     mongo:
         image: mongo:5.0.5-focal
         volumes:
-            mongodb_volume:/data/db
+            - mongodb_volume:/data/db
 
     nginx:
         image: nginx
