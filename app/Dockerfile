@@ -1,7 +1,7 @@
 FROM ubuntu
 RUN apt-get update
 RUN apt-get install -y
-RUN apt install python3-pip
+RUN apt install python3-pip -y
 RUN pip3 install flask
 RUN pip3 install pytelegrambotapi
 RUN pip3 install mongoengine
