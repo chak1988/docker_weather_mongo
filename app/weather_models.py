@@ -3,7 +3,7 @@ import os
 
 
 
-me.connect('weather_db', host = 'mongodb')
+me.connect('weather_db', host = 'mongodb', port =27017)
 
 class Gallary(me.Document):
     title = me.StringField(required = True, min_length = 2)
