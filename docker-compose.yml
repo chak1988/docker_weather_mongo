@@ -12,6 +12,8 @@ services:
             - mongo
         env_file: app/.env
 
+        command: python3 weather_models.py
+
     mongo:
         image: mongo:5.0.5-focal
         hostname: mongo
@@ -19,7 +21,7 @@ services:
             - mongodb_volume:/data/db
         env_file: app/.env
 
-        command: python3 weather_models.py
+
 
         ports:
             - 27018:27017
