@@ -22,7 +22,7 @@ services:
         command: python3 weather_models.py
 
         ports:
-            - 27017:27017
+            - 27018:27017
 
     nginx:
         image: nginx
