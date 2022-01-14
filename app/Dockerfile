@@ -1,9 +1,11 @@
-FROM python:3.9-slim
+FROM ubuntu:alpine
 RUN apt-get update
 RUN apt-get install -y
+RUN apt install python3-pip
 RUN pip3 install flask
 RUN pip3 install pytelegrambotapi
 RUN pip3 install mongoengine
+RUN apt install -y mongodb
 WORKDIR /home/docker_weather_bot
 COPY . /home/docker_weather_bot
 COPY webhook_weather_key.pem /etc/ssl/private/webhook_weather_key.pem
