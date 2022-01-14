@@ -16,7 +16,7 @@ if __name__ == "__main__":
     print(c)
     list_of_images = ['partial_clouds.jpg', 'Sunny_weather.jpg', 'Thunder_clouds.jpeg', 'Thunder_storm.jpg']
     for img in list_of_images:
-        with open(f'/home/docker_weather_mongo/app/images/{img}', 'rb') as image:
+        with open(f'images/{img}', 'rb') as image:
             photo = Gallary(title = f'{img}')
             photo.image.put(image, content_type = 'image/jpeg')
             photo.save()
