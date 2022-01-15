@@ -12,6 +12,8 @@ services:
 
     mongo:
         image: mongo
+        volumes:
+        - ./mongo-volume:/data/db
 
     nginx:
         image: nginx
