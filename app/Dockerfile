@@ -12,4 +12,3 @@ COPY webhook_weather_key.pem /etc/ssl/private/webhook_weather_key.pem
 COPY webhook_weather_cert.pem /etc/ssl/certs/webhook_weather_cert.pem
 RUN pip3 install gunicorn
 CMD ["python3", "weather_models.py"]
-CMD ["gunicorn"  , "--bind", "0.0.0.0:5000", "my_weather_bot:app"]
