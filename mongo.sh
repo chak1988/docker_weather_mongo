@@ -21,6 +21,6 @@ while [[ $? -ne 0 && $COUNTER -lt 60 ]] ; do
 done
 
 # Restore from dump
-mongorestore --drop /home/dump
+mongorestore --drop /home/weather_db
 
 # Keep container running
