@@ -1,1 +1,1 @@
-mongorestore -d weather_db app/weather_db
+mongorestore -d weather_db /weather_db
