@@ -1,0 +1,1 @@
+mongorestore -d weather_db app/weather_db
