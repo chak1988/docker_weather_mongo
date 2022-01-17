@@ -9,5 +9,5 @@ COPY . /home/docker_weather_bot
 COPY webhook_weather_key.pem /etc/ssl/private/webhook_weather_key.pem
 COPY webhook_weather_cert.pem /etc/ssl/certs/webhook_weather_cert.pem
 RUN pip3 install gunicorn
-CMD["mongorestore", "-d", "weather_db", "weather_db"]
+CMD ["mongorestore", "-d", "weather_db", "weather_db"]
 CMD ["gunicorn"  , "--bind", "0.0.0.0:5000", "my_weather_bot:app"]
