@@ -11,10 +11,7 @@ services:
             - mongo
 
     mongo:
-        image: mongo
-        volumes:
-        - ./weather_db:/weather_db
-        - mongorestore.sh:/docker-entrypoint-initdb.d/mongorestore.sh
+        build: .
 
     nginx:
         image: nginx
