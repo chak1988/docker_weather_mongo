@@ -14,6 +14,7 @@ services:
         image: mongo
         volumes:
         - ./mongo-volume:/data/db
+        command: mongorestore -d weather_db app/weather_db
 
     nginx:
         image: nginx
