@@ -70,6 +70,6 @@ if __name__ == "__main__":
     # start_bot()
     bot.remove_webhook()
     time.sleep(1)
-    bot.set_webhook(WEBHOOK_URL, certificate = open('app/webhook_weather_cert.pem', 'r'))
+    bot.set_webhook(WEBHOOK_URL, certificate = open('webhook_weather_cert.pem', 'r'))
     app.run(debug = True)
     #bot.polling()
