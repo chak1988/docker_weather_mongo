@@ -3,6 +3,8 @@ version: '3.0'
 services:
     weather_bot:
         build: app/
+        env_file:
+            - app/.env
         ports:
             - '5000:5000'
         links:
