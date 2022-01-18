@@ -12,8 +12,6 @@ services:
     mongo:
         build: .
         restart: always
-        ports:
-        - 27018:27017
 
     nginx:
         image: nginx
